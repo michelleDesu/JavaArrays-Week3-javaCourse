@@ -6,6 +6,7 @@ public class App
 {
     public static void main( String[] args )
     {
+        //creates 2 arrays one of type int and one of type char
         int [] intArray = new int[] {11, 23,39, 50};
         char [] charArray = { 'J', 'A', 'V', 'A'};
 
