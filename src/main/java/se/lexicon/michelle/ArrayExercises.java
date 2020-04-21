@@ -1,5 +1,7 @@
 package se.lexicon.michelle;
 
+import java.util.Arrays;
+
 public class ArrayExercises {
 
     /**
@@ -37,6 +39,17 @@ public class ArrayExercises {
             }
         }
         return -1;
+    }
+
+
+    /**
+     * Will sort string array in alphabetic order.
+     * @param stringArray
+     */
+    public static void sortArray(String[] stringArray){
+        String[] sortedStringArray;
+        Arrays.sort(stringArray);
+        System.out.println(Arrays.toString(stringArray));
     }
 
 }
