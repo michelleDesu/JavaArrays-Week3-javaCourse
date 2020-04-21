@@ -2,6 +2,11 @@ package se.lexicon.michelle;
 
 //import se.lexicon.michelle.ArrayExercises;
 
+/**
+ * @author Michelle Johansson
+ *
+ */
+
 public class App 
 {
     public static void main( String[] args )

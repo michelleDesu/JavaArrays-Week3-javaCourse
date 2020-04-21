@@ -57,6 +57,7 @@ public class ArrayExercises {
     }
 
     /**
+     * @author Michelle Johansson
      * Will copy and print out an array of integers
      * @param intArray
      */
