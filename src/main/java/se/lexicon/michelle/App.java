@@ -1,6 +1,6 @@
 package se.lexicon.michelle;
 
-import se.lexicon.michelle.ArrayExercises;
+//import se.lexicon.michelle.ArrayExercises;
 
 public class App 
 {
