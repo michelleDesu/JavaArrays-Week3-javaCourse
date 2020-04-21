@@ -13,10 +13,18 @@ public class ArrayExercisesTest {
     @Test
     public void given_array_return_index_of_element_in_array(){
         int[] intArray = { 15, 32, 7, 42};
-        int expected = 2,
-            actual = ArrayExercises.indexOf(intArray, 7);
+        int number = 7,
+                expected = 2,
+                actual = ArrayExercises.indexOf(intArray, 7);
         assertEquals( expected, actual, 0);
 
-
+    }
+    @Test
+    public void given_array_return_non_existing_element(){
+        int[] intArray = { 15, 32, 7, 42};
+        int number = 50,
+                expected = -1,
+                actual = ArrayExercises.indexOf(intArray, number);
+        assertEquals( expected, actual, 0);
     }
 }
