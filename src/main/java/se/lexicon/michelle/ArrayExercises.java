@@ -70,5 +70,18 @@ public class ArrayExercises {
         printArray(arrayCopy);
     }
 
+    public static void printTwoDimenstionalStrings(String[][] twoDimArray){
+        System.out.println();
+        for (int i = 0; i < twoDimArray.length; i++){
+            for (int j = 0; j < twoDimArray[i].length; j++){
+                System.out.print(twoDimArray[i][j] + " ");
+                if(j == twoDimArray[i].length-1){
+                    System.out.println();
+                }
+            }
+
+        }
+    }
+
 
 }

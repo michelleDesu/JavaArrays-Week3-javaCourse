@@ -16,6 +16,17 @@ public class App
                 "Stockholm"
         };
 
+        String[][] countryCityValues = {
+                {
+                    "France",
+                    "Paris"
+                },
+                {
+                    "Sweden",
+                    "Stockholm"
+                }
+        };
+
         ArrayExercises arr = new ArrayExercises();
       /*
         arr.printArray(intArray);
@@ -25,6 +36,7 @@ public class App
 
       */
         arr.copyArray(intArray);
+        arr.printTwoDimenstionalStrings(countryCityValues);
 
 
 
