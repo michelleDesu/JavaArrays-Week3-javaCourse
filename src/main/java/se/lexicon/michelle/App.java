@@ -17,10 +17,14 @@ public class App
         };
 
         ArrayExercises arr = new ArrayExercises();
+      /*
         arr.printArray(intArray);
         arr.printArray(charArray);
         System.out.println("\n" + arr.indexOf(intArray, 39));
         arr.sortArray(stringArray);
+
+      */
+        arr.copyArray(intArray);
 
 
 

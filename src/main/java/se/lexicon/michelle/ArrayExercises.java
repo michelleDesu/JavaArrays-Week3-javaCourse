@@ -10,9 +10,13 @@ public class ArrayExercises {
      */
     public static void printArray(int[] intArray){
 
-        for (int i = 0 ; i < intArray.length; i++){
-           System.out.print(intArray[i] + " ");
+        for(int integer: intArray){
+            System.out.print(integer + " ");
         }
+
+      /*  for (int i = 0 ; i < intArray.length; i++){
+           System.out.print(intArray[i] + " ");
+        }*/
     }
 
     /**
@@ -51,5 +55,20 @@ public class ArrayExercises {
         Arrays.sort(stringArray);
         System.out.println(Arrays.toString(stringArray));
     }
+
+    /**
+     * Will copy and print out an array of integers
+     * @param intArray
+     */
+    public static void copyArray(int[] intArray){
+        int[] arrayCopy = Arrays.copyOf(intArray, intArray.length);
+
+        System.out.print("\nElements from first array: ");
+        printArray(intArray);
+
+        System.out.print("\nElements from second array: ");
+        printArray(arrayCopy);
+    }
+
 
 }
