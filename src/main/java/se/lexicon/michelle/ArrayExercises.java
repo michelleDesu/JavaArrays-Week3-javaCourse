@@ -1,6 +1,9 @@
 package se.lexicon.michelle;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class ArrayExercises {
 
@@ -123,6 +126,32 @@ public class ArrayExercises {
         return unevenNumbersArray;
     }
 
+    /**
+     * removes the duplicate elements of a given array
+     * @param intArray
+     * @return
+     */
+
+    public static Integer[] removeDuplicates(Integer[] intArray){
+
+        //This array has duplicate elements
+        System.out.println( Arrays.toString(intArray) );
+
+        //Create set from array elements
+        LinkedHashSet<Integer> linkedHashSet = new LinkedHashSet<>( Arrays.asList(intArray) );
+
+        /*
+         Get back the array without duplicates
+          LinkedHashSet does two things internally :
+            * Remove duplicate elements
+            * Maintain the order of elements added to it
+         */
+        Integer[] arrayWithoutDuplicates = linkedHashSet.toArray(new Integer[] {});
+
+        //Verify the array content
+        System.out.println( Arrays.toString(arrayWithoutDuplicates) );
+        return arrayWithoutDuplicates;
+    }
 
     /**
      * Creates a new array with the added value

@@ -60,7 +60,7 @@ public class ArrayExercisesTest {
 
     @Test
     public void given_array_remove_duplicates(){
-        int[] intArray = {20, 20, 40, 20, 30, 40, 50, 60, 50},
+        Integer[] intArray = {20, 20, 40, 20, 30, 40, 50, 60, 50},
                 expected = {20,40,30,50,60},
                 actualArray = ArrayExercises.removeDuplicates(intArray);
                 assertArrayEquals(expected, actualArray);
