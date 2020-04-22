@@ -2,6 +2,7 @@ package se.lexicon.michelle;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 public class ArrayExercisesTest {
@@ -27,4 +28,35 @@ public class ArrayExercisesTest {
                 actual = ArrayExercises.indexOf(intArray, number);
         assertEquals( expected, actual, 0);
     }
+
+    @Test
+    public void given_array_print_average(){
+        double[] doubleArray = { 43, 5 ,23, 17, 2, 14 };
+        double quantity = 6,
+                sumArray = 104,
+                expectedAverage = 17.333,
+                actualAverage = ArrayExercises.calculatePrintAverage(doubleArray);
+        assertEquals(expectedAverage, actualAverage, 0.01);
+    }
+
+    @Test
+    public void given_array_print_uneven_numbers(){
+        int[] intArray = { 1, 2, 4, 7, 9, 12 },
+            expectedUnevenArray = { 1, 7, 9},
+            actualUnevenArray = ArrayExercises.unevenArray( intArray);
+        assertArrayEquals(expectedUnevenArray, actualUnevenArray);
+
+
+    }
+    @Test
+    public void given_array_add_integer_value_to_array(){
+        int addValue = 60;
+        int[] values = { 10, 20, 30, 40, 50},
+        expectedAddedArray = {10, 20, 30, 40, 50 , 60},
+        actualAddedArray = ArrayExercises.add(values , addValue);
+        assertArrayEquals(expectedAddedArray, actualAddedArray);
+
+    }
+
+
 }
