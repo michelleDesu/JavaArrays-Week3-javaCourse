@@ -191,4 +191,19 @@ public class ArrayExercises {
         }
     }
 
+    /**
+     * reverse and then returns given array
+     * @param intArray
+     * @return
+     */
+    public static int[] reversedArray(int[] intArray){
+        int[] newArray = new int[0];
+        int number = 0;
+        for(int i = intArray.length - 1; i >= 0 ; i--){
+            number = intArray[i];
+            newArray = add(newArray, number);
+        }
+        return newArray;
+    }
+
 }

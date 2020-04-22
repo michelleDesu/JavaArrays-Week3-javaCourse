@@ -66,7 +66,13 @@ public class ArrayExercisesTest {
                 assertArrayEquals(expected, actualArray);
     }
 
+    @Test
+    public void given_array_return_reversed_array(){
+        int[] intArray = { 1, 2, 3, 4},
+                expected = {4, 3, 2, 1},
+                actual = ArrayExercises.reversedArray(intArray);
 
+        assertArrayEquals(expected, actual);
 
-
+    }
 }
