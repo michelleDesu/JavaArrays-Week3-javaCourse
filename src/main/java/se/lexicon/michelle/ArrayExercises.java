@@ -17,10 +17,6 @@ public class ArrayExercises {
         for (int integer : intArray) {
             System.out.print(integer + " ");
         }
-
-      /*  for (int i = 0 ; i < intArray.length; i++){
-           System.out.print(intArray[i] + " ");
-        }*/
     }
 
     /**
@@ -29,9 +25,10 @@ public class ArrayExercises {
      * @param charArray
      */
     public static void printArray(char[] charArray) {
-        for (int i = 0; i < charArray.length; i++) {
-            System.out.print(charArray[i] + " ");
+        for(char charValue : charArray){
+            System.out.print(charValue + " ");
         }
+
     }
 
     /**
@@ -165,6 +162,33 @@ public class ArrayExercises {
         int offset = newArray.length-1;
         newArray[offset] = addNumber;
         return newArray;
+    }
+
+    /**
+     * prints out a multiplication table of a given array.
+     * @param multiplication
+     */
+    public static void multiplication(int[][] multiplication){
+        for(int i = 0 ; i < multiplication.length; i++){
+
+            for(int j = 0 ; j < multiplication[i].length; j++){
+
+                System.out.print( ( ( i+ 1)*(j+1) ) +  "\t");
+            }
+            System.out.println();
+        }
+    }
+
+    /**
+     * set default values in the given array
+     * @param intArray
+     */
+    public static void initArray(int[][] intArray){
+        for(int i=0; i<intArray.length; i++){
+            for(int j=0; j<intArray[i].length; j++){
+                intArray[i][j] = 0;
+            }
+        }
     }
 
 }

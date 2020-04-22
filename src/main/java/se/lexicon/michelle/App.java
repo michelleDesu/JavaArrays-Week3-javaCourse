@@ -39,11 +39,23 @@ public class App
         System.out.println("\n" + arr.indexOf(intArray, 39));
         arr.sortArray(stringArray);
 
-      */
+
         arr.copyArray(intArray);
         arr.printTwoDimenstionalStrings(countryCityValues);
+        */
 
+        runMultiplication();
 
+    }
 
+    public static void runMultiplication(){
+        ArrayExercises arr = new ArrayExercises();
+       /* int[][] multiplication = {
+                {1 , 2, 3 },
+                {1 , 2, 3 }
+        };*/
+        int[][] multiplication = new int[10][10];
+        arr.initArray(multiplication);
+        arr.multiplication(multiplication);
     }
 }
