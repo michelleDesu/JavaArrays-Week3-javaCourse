@@ -77,10 +77,12 @@ public class ArrayExercises {
 
     public static void printTwoDimenstionalStrings(String[][] twoDimArray) {
         System.out.println();
-        for (int i = 0; i < twoDimArray.length; i++) {
-            for (int j = 0; j < twoDimArray[i].length; j++) {
-                System.out.print(twoDimArray[i][j] + " ");
-                if (j == twoDimArray[i].length - 1) {
+
+        for (String[] strings : twoDimArray) {
+
+            for (int j = 0; j < strings.length; j++) {
+                System.out.print(strings[j] + " ");
+                if (j == strings.length - 1) {
                     System.out.println();
                 }
             }
@@ -92,9 +94,9 @@ public class ArrayExercises {
         int totalNumberOfValues = 0;
         double sum = 0;
 
-        for (int i = 0; i < doubleArray.length; i++) {
+        for (double v : doubleArray) {
             totalNumberOfValues++;
-            sum += doubleArray[i];
+            sum += v;
         }
         if (totalNumberOfValues == 0) {
             return -1;
@@ -112,10 +114,10 @@ public class ArrayExercises {
      */
     public static int[] unevenArray(int[] intArray) {
         int[] unevenNumbersArray = new int[0];
-        for (int i = 0; i < intArray.length; i++) {
+        for (int value : intArray) {
 
-            if ((intArray[i] % 2) >= 1) {
-                unevenNumbersArray = add(unevenNumbersArray, intArray[i]);
+            if ((value % 2) >= 1) {
+                unevenNumbersArray = add(unevenNumbersArray, value);
             }
         }
         System.out.print(Arrays.toString(unevenNumbersArray));
