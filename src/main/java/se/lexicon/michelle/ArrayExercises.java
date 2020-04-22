@@ -184,10 +184,8 @@ public class ArrayExercises {
      * @param intArray
      */
     public static void initArray(int[][] intArray){
-        for(int i=0; i<intArray.length; i++){
-            for(int j=0; j<intArray[i].length; j++){
-                intArray[i][j] = 0;
-            }
+        for (int[] ints : intArray) {
+            Arrays.fill(ints, 0);
         }
     }
 
