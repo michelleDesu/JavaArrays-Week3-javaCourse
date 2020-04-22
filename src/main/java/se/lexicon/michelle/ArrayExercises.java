@@ -106,7 +106,7 @@ public class ArrayExercises {
     }
 
     /**
-     * and print out and return only the uneven numbers of an array
+     * print out and return an array with only the uneven numbers of the given array
      * @param intArray
      * @return
      */
