@@ -25,6 +25,43 @@ public class App
         runReverseExample();
     }
 
+    public static void runPrintExamples(){
+
+        //creates 2 arrays one of type int and one of type char
+        int [] intArray = new int[] {11, 23,39, 50};
+        char [] charArray = { 'J', 'A', 'V', 'A'};
+
+        String[][] countryCityValues = {
+                {
+                        "France",
+                        "Paris"
+                },
+                {
+                        "Sweden",
+                        "Stockholm"
+                }
+        };
+
+        ArrayExercises.printArray(intArray);
+        ArrayExercises.printArray(charArray);
+
+        ArrayExercises.printTwoDimenstionalStrings(countryCityValues);
+    }
+
+
+    public static void runIndexOf_Sort_CopyExamples(){
+        int [] intArray = new int[] {11, 23,39, 50};
+        String[] stringArray = {
+                "Paris",
+                "London",
+                "New York",
+                "Stockholm"
+        };
+        System.out.println("\n" + ArrayExercises.indexOf(intArray, 39));
+        ArrayExercises.sortArray(stringArray);
+        ArrayExercises.copyArray(intArray);
+    }
+
     public static void runMultiplicationExample(){
         int[][] multiplication = new int[10][10];
         ArrayExercises.initArray(multiplication);
@@ -66,41 +103,5 @@ public class App
 
     }
 
-    public static void runPrintExamples(){
-
-        //creates 2 arrays one of type int and one of type char
-        int [] intArray = new int[] {11, 23,39, 50};
-        char [] charArray = { 'J', 'A', 'V', 'A'};
-
-        String[][] countryCityValues = {
-                {
-                        "France",
-                        "Paris"
-                },
-                {
-                        "Sweden",
-                        "Stockholm"
-                }
-        };
-
-        ArrayExercises.printArray(intArray);
-        ArrayExercises.printArray(charArray);
-
-        ArrayExercises.printTwoDimenstionalStrings(countryCityValues);
-    }
-
-
-    public static void runIndexOf_Sort_CopyExamples(){
-        int [] intArray = new int[] {11, 23,39, 50};
-        String[] stringArray = {
-                "Paris",
-                "London",
-                "New York",
-                "Stockholm"
-        };
-        System.out.println("\n" + ArrayExercises.indexOf(intArray, 39));
-        ArrayExercises.sortArray(stringArray);
-        ArrayExercises.copyArray(intArray);
-    }
 
 }
