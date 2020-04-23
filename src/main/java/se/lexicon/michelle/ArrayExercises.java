@@ -1,9 +1,7 @@
 package se.lexicon.michelle;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class ArrayExercises {
 
@@ -167,6 +165,25 @@ public class ArrayExercises {
     }
 
     /**
+     * creates an array and adds the values of the first and the second array to the new array
+     * returns the new array with the new values.
+     * @param intArray
+     * @param addedArray
+     * @return
+     */
+    public static int[] add( final int[] intArray, int[] addedArray){
+        int[] newArray = Arrays.copyOf(intArray, intArray.length + addedArray.length);
+        int offset = intArray.length;
+
+        for(int i = offset, j = 0; i < newArray.length; i++, j++){
+            newArray[i] = addedArray[j];
+        }
+        return newArray;
+
+
+    }
+
+    /**
      * prints out a multiplication table of a given array.
      * @param multiplication
      */
@@ -189,6 +206,22 @@ public class ArrayExercises {
         for (int[] ints : intArray) {
             Arrays.fill(ints, 0);
         }
+    }
+
+    /**
+     * return an array, with given size, with random numbers
+     * @param arraySize
+     * @return
+     */
+    public static int[] initRandomArray( int arraySize){
+        int[] newArray = new int[arraySize];
+        Random rand = new Random();
+
+        for(int i = 0 ; i < newArray.length; i++){
+            newArray[i] = rand.nextInt(10) +1;
+        }
+        System.out.println();
+        return newArray;
     }
 
     /**
@@ -228,6 +261,33 @@ public class ArrayExercises {
         printArray(newArray);
         return newArray;
 
+    }
+
+    /**
+     * sorts the given array
+     * creates two arrays, one for even numbers and one for odd numbers.
+     * checks if array is even or odd numbers and places it in the respective array.
+     * stores the values of even and odd numbers to a new array and returns it.
+     * @param intArray
+     * @param arrayToBeEvenOdd
+     * @return
+     */
+    public static int[] evenOddSorted( int[] intArray, int[] arrayToBeEvenOdd){
+        int[]   newSortedEven = new int[0],
+                newSortedOdd = new int[0];
+
+        Arrays.sort(intArray);
+
+        for(int i = 0, j = 0; i < intArray.length; i++, j++){
+            if(intArray[i] % 2 == 0){
+                newSortedEven = add(newSortedEven, intArray[i] );
+            }else{
+                newSortedOdd = add(newSortedOdd, intArray[i]);
+            }
+        }
+        arrayToBeEvenOdd = add(newSortedEven, newSortedOdd);
+
+        return arrayToBeEvenOdd;
     }
 
 }

@@ -3,6 +3,7 @@ package se.lexicon.michelle;
 //import se.lexicon.michelle.ArrayExercises;
 
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * @author Michelle Johansson
@@ -19,10 +20,11 @@ public class App
 
     public static void runExamples(){
 
-        runPrintExamples();
+        //runPrintExamples();
         //runIndexOf_Sort_CopyExamples();
         //runMultiplicationExample();
         //runReverseExample();
+        runEvenOddSortExample();
     }
 
     public static void runPrintExamples(){
@@ -79,10 +81,28 @@ public class App
         ArrayExercises.multiplication(multiplication);
     }
 
+    /**
+     * creates a random number and then creates an array with the size of that number
+     * --> initializes the array with random numbers--> sorts the array
+     * --> runs evenOddSorted method that returns a sorted array where even numbers are first and then the odd numbers are at the end of the array.
+     * prints out the initialized array then the evenOddNumbers.
+     */
+    public static void runEvenOddSortExample(){
+        Random rand = new Random();
+        int arraySize = rand.nextInt(10) +1;
+        int[] intArray = ArrayExercises.initRandomArray( arraySize),
+                toBeSorted = new int[0];
+
+        System.out.println("The array given: " + Arrays.toString(intArray));
+        toBeSorted = ArrayExercises.evenOddSorted(intArray, toBeSorted);
+
+        System.out.println( "Array sorted in 'even' then 'odd' numbers" + Arrays.toString(toBeSorted));
+
+    }
+
     public static void runReverseExample(){
         System.out.println();
-        boolean quit = false,
-                stateNumber = true;
+        boolean quit = false;
         int number = 0;
         int[] numbers = new int[0];
 

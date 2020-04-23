@@ -58,6 +58,16 @@ public class ArrayExercisesTest {
     }
 
     @Test
+    public void given_two_arrays_add_integer_value_to_array(){
+        int[] intArray = { 10, 20, 30},
+                addedArray = { 40, 50, 60},
+                expected = {10, 20, 30, 40, 50, 60},
+                actual = ArrayExercises.add(intArray, addedArray);
+
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
     public void given_array_remove_duplicates(){
         Integer[] intArray = {20, 20, 40, 20, 30, 40, 50, 60, 50},
                 expected = {20,40,30,50,60},
@@ -88,6 +98,17 @@ public class ArrayExercisesTest {
 
                 actual = ArrayExercises.diagonalArray( twoDimArray);
           assertArrayEquals(expected,actual);
+    }
+
+    @Test
+    public void given_two_arrays_return_Even_odd_sorted_array(){
+        int[] intArray = {1, 12, 7, 16},
+                arrayToBeSorted = new int[0],
+                expected = {12, 16, 1 , 7},
+                actual = ArrayExercises.evenOddSorted(intArray, arrayToBeSorted);
+        assertArrayEquals(expected, actual);
 
     }
+
+
 }
