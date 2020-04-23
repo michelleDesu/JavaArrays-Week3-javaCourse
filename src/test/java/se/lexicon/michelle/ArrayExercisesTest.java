@@ -1,5 +1,4 @@
 package se.lexicon.michelle;
-import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
@@ -73,6 +72,22 @@ public class ArrayExercisesTest {
                 actual = ArrayExercises.reversedArray(intArray);
 
         assertArrayEquals(expected, actual);
+
+    }
+
+    @Test
+    public void given_twoDimensionalArray_print_diagonal_elements(){
+        int[][] twoDimArray =
+                {
+                        { 1 , 2, 3},
+                        { 2 , 4, 6},
+                        { 3 , 6, 9}
+                };
+
+          int[]  expected = {1 , 4 , 9},
+
+                actual = ArrayExercises.diagonalArray( twoDimArray);
+          assertArrayEquals(expected,actual);
 
     }
 }

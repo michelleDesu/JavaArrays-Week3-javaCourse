@@ -206,4 +206,28 @@ public class ArrayExercises {
         return newArray;
     }
 
+    /**
+     * given a two dimensional array and return the diagonal
+     * in another array.
+     * @param twoDimArray
+     * @return
+     */
+    public static int[] diagonalArray(int[][] twoDimArray){
+        int[] newArray = new int[0];
+        int pos = 0;
+        for (int i = 0 ; i < twoDimArray.length; i++){
+            for (int j = 0; j < twoDimArray[i].length; j++){
+                if(i == pos && j == pos){
+                    newArray = add(newArray, twoDimArray[i][j]);
+                }
+
+            }
+            pos++;
+
+        }
+        printArray(newArray);
+        return newArray;
+
+    }
+
 }
