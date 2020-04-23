@@ -20,9 +20,9 @@ public class App
     public static void runExamples(){
 
         runPrintExamples();
-        runIndexOf_Sort_CopyExamples();
-        runMultiplicationExample();
-        runReverseExample();
+        //runIndexOf_Sort_CopyExamples();
+        //runMultiplicationExample();
+        //runReverseExample();
     }
 
     public static void runPrintExamples(){
@@ -31,6 +31,7 @@ public class App
         int [] intArray = new int[] {11, 23,39, 50};
         char [] charArray = { 'J', 'A', 'V', 'A'};
 
+        //
         String[][] countryCityValues = {
                 {
                         "France",
@@ -42,10 +43,16 @@ public class App
                 }
         };
 
+
         ArrayExercises.printArray(intArray);
+        System.out.println();
+
+        //overloaded printArray method
         ArrayExercises.printArray(charArray);
+        System.out.println();
 
         ArrayExercises.printTwoDimenstionalStrings(countryCityValues);
+        System.out.println();
     }
 
 
@@ -58,17 +65,22 @@ public class App
                 "Stockholm"
         };
         System.out.println("\n" + ArrayExercises.indexOf(intArray, 39));
+        System.out.println();
         ArrayExercises.sortArray(stringArray);
+        System.out.println();
         ArrayExercises.copyArray(intArray);
+        System.out.println();
     }
 
     public static void runMultiplicationExample(){
+        System.out.println();
         int[][] multiplication = new int[10][10];
         ArrayExercises.initArray(multiplication);
         ArrayExercises.multiplication(multiplication);
     }
 
     public static void runReverseExample(){
+        System.out.println();
         boolean quit = false,
                 stateNumber = true;
         int number = 0;
